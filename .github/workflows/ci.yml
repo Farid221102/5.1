@@ -15,5 +15,8 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
+      - name: Agregar node_modules/.bin al PATH
+        run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
+
       - name: Ejecutar pruebas
         run: npm test
